@@ -1,0 +1,25 @@
+{
+  "name": "@yuanchuan/cond",
+  "version": "1.0.0",
+  "description": "Lisp like conditional statement for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanchuan/cond.git"
+  },
+  "keywords": [
+    "cond",
+    "if",
+    "condition",
+    "jsx"
+  ],
+  "author": "Yuan Chuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuanchuan/cond/issues"
+  },
+  "homepage": "https://github.com/yuanchuan/cond#readme"
+}

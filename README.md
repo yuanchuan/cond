@@ -1,6 +1,6 @@
 # Cond
 
-Lisp-like condition statement for JSX
+Lisp-like conditional statement for JSX
 
 ## Installation
 
@@ -8,7 +8,7 @@ Lisp-like condition statement for JSX
 npm install yuanchuan/cond --save
 ```
 
-## Example
+## Examples
 
 ##### like if statement
 
@@ -45,7 +45,7 @@ npm install yuanchuan/cond --save
 ```
 
 
-## Shorcuts
+## Shortcuts
 
 ##### If
 
@@ -53,9 +53,9 @@ npm install yuanchuan/cond --save
 import { If } from 'yuanchuan/cond';
 
 <div>
-  { If(n > 0, (
-      <div>hell world</div>
-  ))}
+  { If(n > 0,
+      (<div>hell world</div>)
+  )}
 </div>
 ```
 
@@ -76,22 +76,45 @@ import { If } from 'yuanchuan/cond';
 import { unless } from 'yuanchuan/cond';
 
 <div>
-  { unless(n != 0, (
-      <div>hell world</div>
-  ))}
+  { unless(n != 0,
+      (<div>hell world</div>)
+  )}
 </div>
 ```
 
 ## Extend cond
 
 ```jsx
-  let condEven = cond((a, b) => {
-    if (a % 2 === 0) return b;
-  });
+  let condOdd = cond((a, b) => (a % 2 ? b : null));
 
   <div>
-    { condEven(number, (
-        <div>even number</div>
+    { condOdd(number, (
+        <div>odd number</div>
     )}
   </div>
 ```
+
+```jsx
+  let condThenWrap = cond((a, b) => {
+    if (a) {
+      return (
+        <div className="deepNested">
+          { b }
+        </div>
+      );
+    }
+  });
+
+  <div>
+    { condThenWrap(
+        n == 3, (<div>hell world</div>),
+        n == 6, (<div>something</div>),
+        n == 9, (<div>something else</div>),
+        true,   (<div>default</div>)
+    )}
+  </div>
+```
+
+## License
+
+MIT
