@@ -1,7 +1,7 @@
 {
   "name": "@yuanchuan/cond",
   "version": "1.0.0",
-  "description": "Lisp like conditional statement for JS",
+  "description": "Lisp-like conditional statement for JSX",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
