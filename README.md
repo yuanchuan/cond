@@ -85,34 +85,34 @@ import { unless } from 'yuanchuan/cond';
 ## Extend cond
 
 ```jsx
-  let condOdd = cond((a, b) => (a % 2 ? b : null));
+let condOdd = cond((a, b) => (a % 2 ? b : null));
 
-  <div>
-    { condOdd(number, (
-        <div>odd number</div>
-    )}
-  </div>
+<div>
+  { condOdd(number, (
+      <div>odd number</div>
+  )}
+</div>
 ```
 
 ```jsx
-  let condThenWrap = cond((a, b) => {
-    if (a) {
-      return (
-        <div className="deepNested">
-          { b }
-        </div>
-      );
-    }
-  });
+let condThenWrap = cond((a, b) => {
+  if (a) {
+    return (
+      <div className="deepNested">
+        { b }
+      </div>
+    );
+  }
+});
 
-  <div>
-    { condThenWrap(
-        n == 3, (<div>hell world</div>),
-        n == 6, (<div>something</div>),
-        n == 9, (<div>something else</div>),
-        true,   (<div>default</div>)
-    )}
-  </div>
+<div>
+  { condThenWrap(
+      n == 3, (<div>hell world</div>),
+      n == 6, (<div>something</div>),
+      n == 9, (<div>something else</div>),
+      true,   (<div>default</div>)
+  )}
+</div>
 ```
 
 ## License
