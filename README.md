@@ -13,6 +13,8 @@ npm install yuanchuan/cond --save
 ##### like if statement
 
 ```jsx
+import { cond } from 'yuanchuan/cond';
+
 <div>
   { cond(n > 0,
       (<div>hell world</div>)
