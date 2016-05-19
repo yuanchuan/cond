@@ -10,15 +10,26 @@ function test(name, result, fn) {
   }
 }
 
-test('cond single expresion ok', 'ok', function() {
+test('empty parameters', null, function() {
+  return cond();
+});
+
+test('should ingore redundant parameter', null, function() {
+  return cond(
+    false,  'ok',
+    true
+  );
+});
+
+test('cond single expression ok', 'ok', function() {
   return cond(true, 'ok');
 });
 
-test('cond single expresion fail', null, function() {
+test('cond single expression fail', null, function() {
   return cond(false, 'fail');
 });
 
-test('cond multiple expresion', 'ok', function() {
+test('cond multiple expression', 'ok', function() {
   return cond(
     false, 'fail',
     true,  'ok',
@@ -35,27 +46,27 @@ test('cond default value', 'ok', function() {
   )
 })
 
-test('If single expresion ok', 'ok', function() {
+test('If single expression ok', 'ok', function() {
   return If(true, 'ok')
 });
 
-test('If single expresion fail', null, function() {
+test('If single expression fail', null, function() {
   return If(false, 'fail')
 });
 
-test('If-else expresion first statement', 'ok', function() {
+test('If-else expression first statement', 'ok', function() {
   return If(true, 'ok', 'fail');
 });
 
-test('If-else expresion second statement', 'fail', function() {
+test('If-else expression second statement', 'fail', function() {
   return If(false, 'ok', 'fail');
 });
 
-test('unless single expresion ok', 'ok', function() {
+test('unless single expression ok', 'ok', function() {
   return unless(false, 'ok')
 });
 
-test('unless single expresion fail', null, function() {
+test('unless single expression fail', null, function() {
   return unless(true, 'fail')
 });
 
@@ -68,4 +79,3 @@ test('extend cond', true, function() {
     condEven(3, 'fail') === null
   );
 });
-

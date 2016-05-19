@@ -13,11 +13,11 @@ npm install yuanchuan/cond --save
 ##### like if statement
 
 ```jsx
-import { cond } from 'yuanchuan/cond';
+import { cond } from '@yuanchuan/cond';
 
 <div>
   { cond(n > 0,
-      (<div>hell world</div>)
+      (<div>hello world</div>)
   )}
 </div>
 ```
@@ -27,8 +27,8 @@ import { cond } from 'yuanchuan/cond';
 ```jsx
 <div>
   { cond(
-      n > 0, (<div>hell world</div>),
-      true,  (<div>hell world</div>)
+      n > 0, (<div>hello world</div>),
+      true,  (<div>nothing</div>)
   )}
 </div>
 ```
@@ -38,7 +38,7 @@ import { cond } from 'yuanchuan/cond';
 ```jsx
 <div>
   { cond(
-      n == 3, (<div>hell world</div>),
+      n == 3, (<div>hello world</div>),
       n == 6, (<div>something</div>),
       n == 9, (<div>something else</div>),
       true,   (<div>default</div>)
@@ -52,11 +52,11 @@ import { cond } from 'yuanchuan/cond';
 ##### If
 
 ```jsx
-import { If } from 'yuanchuan/cond';
+import { If } from '@yuanchuan/cond';
 
 <div>
   { If(n > 0,
-      (<div>hell world</div>)
+      (<div>hello world</div>)
   )}
 </div>
 ```
@@ -66,7 +66,7 @@ import { If } from 'yuanchuan/cond';
 ```jsx
 <div>
   { If(n > 0,
-      (<div>hell world</div>),
+      (<div>hello world</div>),
       (<div>something else</div>)
   )}
 </div>
@@ -75,11 +75,11 @@ import { If } from 'yuanchuan/cond';
 ##### unless
 
 ```jsx
-import { unless } from 'yuanchuan/cond';
+import { unless } from '@yuanchuan/cond';
 
 <div>
   { unless(n != 0,
-      (<div>hell world</div>)
+      (<div>hello world</div>)
   )}
 </div>
 ```
@@ -109,7 +109,7 @@ let condThenWrap = cond((a, b) => {
 
 <div>
   { condThenWrap(
-      n == 3, (<div>hell world</div>),
+      n == 3, (<div>hello world</div>),
       n == 6, (<div>something</div>),
       n == 9, (<div>something else</div>),
       true,   (<div>default</div>)

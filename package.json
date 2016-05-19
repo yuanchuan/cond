@@ -1,6 +1,6 @@
 {
   "name": "@yuanchuan/cond",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lisp-like conditional statement for JSX",
   "main": "index.js",
   "scripts": {
